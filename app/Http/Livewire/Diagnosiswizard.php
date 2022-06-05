@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Diseas;
+use App\Models\Question;
 
 class Diagnosiswizard extends Component
 {
@@ -16,7 +17,7 @@ class Diagnosiswizard extends Component
     public $successMsg = '';
     public $data  ;
 
-    public $yes =1.0 ,$no = 0.0,$maybe=0.5;
+    public $resulte,$temp, $yes =1.0 ,$no = 0.0,$maybe=0.5;
 
 
     public function render()
@@ -57,7 +58,9 @@ class Diagnosiswizard extends Component
             'SelectedAnswers' => 'required',
         ]);
 
-        dd($this->SelectedAnswers);
+        // dd($this->SelectedAnswers);
+
+        $this->calcate($this->SelectedAnswers);
 
         $this->currentStep = 3;
     }
@@ -98,5 +101,15 @@ class Diagnosiswizard extends Component
     //     $this->price = '';
     //     $this->detail = '';
     //     $this->status = 1;
+    }
+
+    public function calcate($dataset){
+        foreach($dataset as $key =>$Value)
+        $this->temp +=$Value;
+
+        $meta_data = Question::where('diseas_id',$this->Diseas_id)->count();
+       $this->resulte = ($this->temp/ $meta_data) * 100;
+
+
     }
 }

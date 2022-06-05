@@ -104,59 +104,50 @@
                     wire:click="add('.$this->maybe.')"  value="'.$this->maybe.'" >
                     <label class="form-check-label" for="SelectedAnswers['.$key.']">ربما</label>
                     </div>
-
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="SelectedAnswers.['.$value->id.']"
                     wire:click="add('.$this->no.')"  value="'.$this->no.'" >
                     <label class="form-check-label" for="SelectedAnswers">لا</label>
                     </div>
-
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="SelectedAnswers.['.$value->id.']"
                     wire:click="add('.$this->yes.')"   value="'.$this->yes.'" >
                     <label class="form-check-label" for="SelectedAnswers">نعم</label>
                     </div>
-
                     </div>
                     </div>
                 ';
                 ?>
 
-
-                    <div class="d-flex justify-content-between pb-5" >
-
-                    <button class="btn btn-primary <<<<<<< HEAD
-=======
-
->>>>>>> 14d3868202644e5e0f200e950a9e8a5da5fb8015
-nextBtn btn-lg mr-5 pull-right" type="button"
+        <div class="d-flex justify-content-between pb-5" >
+                    <button class="btn btn-primary nextBtn btn-lg mr-5 pull-right" type="button"
                         wire:click="secondStepSubmit">{{('التالي ')}}</button>
                     <button class="btn btn-danger  ml-5 nextBtn btn-lg pull-right" type="button" wire:click="back(1)" >{{('رجوع')}}</button>
                     </div>
+                </div>
 
-            </div>
             </div>
 
         <div class="row setup-content {{ $currentStep != 3 ? 'display-none' : '' }}" id="step-3">
-            <div class="col-md-12">
-                <h3> Step 3</h3>
+            <div class="col">
+                <h3> {{$this->resulte}}</h3>
                 <table class="table">
-                    {{-- <tr>
+                    <tr>
                         <td>Team Name:</td>
-                        <td><strong>{{$name}}</strong></td>
+                        <td><strong></strong></td>
                     </tr>
                     <tr>
                         <td>Team Price:</td>
-                        <td><strong>{{$price}}</strong></td>
+                        <td><strong></strong></td>
                     </tr>
                     <tr>
                         <td>Team status:</td>
-                        <td><strong>{{$status ? 'Active' : 'DeActive'}}</strong></td>
+                        <td><strong></strong></td>
                     </tr>
                     <tr>
                         <td>Team Detail:</td>
-                        <td><strong>{{$detail}}</strong></td>
-                    </tr> --}}
+                        <td><strong>{{$this->resulte}}</strong></td>
+                    </tr>
                 </table>
                 <div class="d-flex flex-row  mt-5 align-items-between">
                 <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">Finish!</button>
@@ -165,5 +156,4 @@ nextBtn btn-lg mr-5 pull-right" type="button"
             </div>
         </div>
 
-</div>
 
