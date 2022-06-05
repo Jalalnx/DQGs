@@ -181,28 +181,55 @@
 
         <div class="row setup-content {{ $currentStep != 4 ? 'display-none' : '' }}" id="step-4">
             <div class="col">
-                <h3> {{$this->resulte}}</h3>
+                @php
+                if($this->Diseas_id){
+                 $re =App\Models\Diseas::where('id',$this->Diseas_id)->first();
+                 echo  '<h5 class="text-center">  '.$re->name.' </h5>';
+               echo '<h3 class="text-center">  '.$this->resulte.' %  نسبة الاصابه</h3> ';
+               echo '<h4 class="text-center">  '.$re->Diagnosis.' االتشخيص العام </h4>';
+              echo  ' <p class="text-center">  '.$re->description.' </p>';
+                }
+                @endphp
+
                 <table class="table">
                     <tr>
-                        <td>Team Name:</td>
-                        <td><strong></strong></td>
+
+                        <td><strong>
+                        {{$this->child_name}}
+                        </strong></td>
+                        <td>أسم الطفل </td>
                     </tr>
                     <tr>
-                        <td>Team Price:</td>
-                        <td><strong></strong></td>
+
+                        <td><strong>
+                            {{$this->parent_name}}
+                        </strong></td>
+                        <td>ولي الامر </td>
                     </tr>
                     <tr>
-                        <td>Team status:</td>
-                        <td><strong></strong></td>
+
+                        <td><strong>
+                            سنه{{$this->age}}
+                        </strong></td>
+                        <td>العمر</td>
+                    </tr>
+
+                    <tr>
+
+                        <td><strong>
+                            {{$this->phone_number}}
+                        </strong></td>
+                        <td>رقم هاتف ولي الامر</td>
                     </tr>
                     <tr>
-                        <td>Team Detail:</td>
-                        <td><strong>{{$this->resulte}}</strong></td>
+
+                        <td><strong>{{$this->email}}</strong></td>
+                        <td>البريد الالكتروني </td>
                     </tr>
                 </table>
                 <div class="d-flex justify-content-between pb-5" >
-                <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">Finish!</button>
-                <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(3)">Back</button>
+                <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">حفظ</button>
+                <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(3)">رجوع</button>
                 </div>
             </div>
         </div>

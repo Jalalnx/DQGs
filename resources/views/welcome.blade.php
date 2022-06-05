@@ -40,10 +40,10 @@
 
         <div class=" p-0 collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{url(' ')}}" class="nav-item nav-link active  text-primary"><h5>الرئيسيه</h4></a>
-                <a href="{{url('user/Diagnosis')}}" class="nav-item nav-link">تحاليل</a>
-                <a href="service.html" class="nav-item nav-link">الالعاب</a>
-                <a href="project.html" class="nav-item nav-link">فيديهات</a>
+                <a href="{{url(' ')}}" class="{{ Request::is(' ') ? '  text-primary' : '' }} nav-item nav-link active "><h5>الرئيسيه</h4></a>
+                <a href="{{url('user/Diagnosis')}}" class=" {{ Request::is('user/Diagnosis') ? ' text-primary' : '' }}nav-item nav-link"><h5>تحاليل </h4></a>
+                <a href="service.html" class="nav-item nav-link"><h5>الالعاب </h4></a>
+                <a href="project.html" class="nav-item nav-link"><h5>فيديهات </h4></a>
 
 
             </div>
