@@ -1,0 +1,125 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$stick-length: 2.2rem;
+$line-width: 2px;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 640px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: column-reverse;
+    margin-top: .4rem;
+
+    .circ {
+      &::before, &::after {
+        margin-top: 0;
+      }
+    }
+
+    .half {
+      transform: rotate(180deg);
+      top: 0;
+    }
+  }
+}
+
+
+.circ {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    background: #32C36C;
+    border-radius: 0.5rem;
+    top: 50%;
+    margin-top: 1px;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: -#{$stick-length};
+  }
+
+  &::after {
+    right: -#{$stick-length};
+  }
+}
+
+.half {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: $line-width solid #32C36C;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0 0 3rem 3rem;
+  border-top-width: 0;
+
+  &::before,
+  &::after {
+    content: '';
+    width: $stick-length;
+    height: $line-width;
+    background: #32C36C;
+    display: block;
+    position: absolute;
+    top: 0%;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
+}
+
+.inner {
+  border-radius: 5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: #0d6efd;
+}
+
+
+.selected{
+    background-color: palevioletred;
+}
+// https://codepen.io/maxoys45/pen/PoQKvqg
+
