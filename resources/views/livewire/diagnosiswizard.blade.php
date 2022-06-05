@@ -45,6 +45,14 @@
                 <div class="text">النتيجه</div>
                 <div class="circ ">
                 <div class="half"></div>
+                <div class="inner    {{ $currentStep !=4? 'btn-default' : 'selected shadow' }}"></div>
+                </div>
+            </div>
+
+            <div class="step step4 multi-wizard-step" >
+                <div class="text">بيانات المريض</div>
+                <div class="circ ">
+                <div class="half"></div>
                 <div class="inner    {{ $currentStep !=3? 'btn-default' : 'selected shadow' }}"></div>
                 </div>
             </div>
@@ -128,7 +136,50 @@
 
             </div>
 
-        <div class="row setup-content {{ $currentStep != 3 ? 'display-none' : '' }}" id="step-3">
+
+            <div class="row setup-content {{ $currentStep != 3 ? 'display-none' : '' }}" id="step-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="parent_name">أسم ولي الامر</label>
+                        <input type="text" wire:model="parent_name" class="form-control" id="parent_name">
+                        @error('parent_name') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="child_name">أسم الطفل </label>
+                        <input type="text" wire:model="child_name" class="form-control" id="child_name" />
+                        @error('child_name') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="age">العمر</label>
+                        <input type="number" wire:model="age" class="form-control" id="age">
+                        @error('age') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">العنوان</label>
+                        <input type="text" wire:model="address" class="form-control"
+                            id="address">
+                        @error('address') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_number">رقم الهاتف</label>
+                        <input type="number" wire:model="phone_number" class="form-control" id="phone_number">
+                        @error('phone_number') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="email"> البريد</label>
+                        <input type="text" wire:model="email" class="form-control" id="email">
+                        @error('email') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+
+                    <div class="d-flex justify-content-between pt-5 pb-5" >
+                    <button class="btn btn-success btn-lg pull-right" wire:click="saveInfo" type="button">التالي</button>
+                    <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(2)">رجوع</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row setup-content {{ $currentStep != 4 ? 'display-none' : '' }}" id="step-4">
             <div class="col">
                 <h3> {{$this->resulte}}</h3>
                 <table class="table">
@@ -149,9 +200,9 @@
                         <td><strong>{{$this->resulte}}</strong></td>
                     </tr>
                 </table>
-                <div class="d-flex flex-row  mt-5 align-items-between">
+                <div class="d-flex justify-content-between pb-5" >
                 <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">Finish!</button>
-                <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(2)">Back</button>
+                <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(3)">Back</button>
                 </div>
             </div>
         </div>

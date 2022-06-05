@@ -20,6 +20,7 @@ class Diagnosiswizard extends Component
     public $resulte,$temp, $yes =1.0 ,$no = 0.0,$maybe=0.5;
 
 
+    public $parent_name,$child_name,$age,$address,$phone_number,$email;
     public function render()
     {
     //    $Diseas= Diseas::all();
@@ -89,6 +90,7 @@ class Diagnosiswizard extends Component
      */
     public function back($step)
     {
+        $this->resulte = 0;
         $this->currentStep = $step;
     }
 
@@ -101,6 +103,21 @@ class Diagnosiswizard extends Component
     //     $this->price = '';
     //     $this->detail = '';
     //     $this->status = 1;
+    }
+
+    public function saveInfo()
+    {
+        $validatedData = $this->validate([
+            'parent_name' => 'required',
+            'child_name' => 'required',
+            'age' => 'required|numeric',
+            'address' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required',
+        ]);
+
+        $this->currentStep = 4;
+
     }
 
     public function calcate($dataset){
