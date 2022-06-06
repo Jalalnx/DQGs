@@ -40,8 +40,13 @@
 
         <div class=" p-0 collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{url(' ')}}" class="{{ Request::is(' ') ? '  text-primary' : '' }} nav-item nav-link active "><h5>الرئيسيه</h4></a>
-                <a href="{{url('user/Diagnosis')}}" class=" {{ Request::is('user/Diagnosis') ? ' text-primary' : '' }}nav-item nav-link"><h5>تحاليل </h4></a>
+                <a href="{{url(' ')}}" class="{{ Request::is('') ? ' active text-primary' : ' ' }} nav-item nav-link  "><h5>الرئيسيه  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-postcard-heart" viewBox="0 0 16 16">
+                    <path d="M8 4.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm3.5.878c1.482-1.42 4.795 1.392 0 4.622-4.795-3.23-1.482-6.043 0-4.622ZM2.5 5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Z"/>
+                    <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Z"/>
+                  </svg></h4></a>
+                <a href="{{url('user/Diagnosis')}}" class=" {{ Request::is('/user/Diagnosis') ? '  text-primary' : ' active' }}nav-item nav-link"><h5> تحاليل   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+                  </svg> </h4></a>
                 <a href="service.html" class="nav-item nav-link"><h5>الالعاب </h4></a>
                 <a href="project.html" class="nav-item nav-link"><h5>فيديهات </h4></a>
 

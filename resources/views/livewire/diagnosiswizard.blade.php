@@ -45,7 +45,8 @@
                 <div class="text">النتيجه</div>
                 <div class="circ ">
                 <div class="half"></div>
-                <div class="inner    {{ $currentStep !=4? 'btn-default' : 'selected shadow' }}"></div>
+                <div class="inner    {{ $currentStep !=4? 'btn-default' : 'selected shadow' }}">
+                </div>
                 </div>
             </div>
 
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="step multi-wizard-step">
-                <div class="text">المرض</div>
+                <div class="text">المرض </div>
                 <div class="circ">
                 <div class="half"></div>
                 <div class="inner {{ $currentStep != 1? 'btn-default' : 'selected shadow' }}"></div>
