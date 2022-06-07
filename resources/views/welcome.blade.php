@@ -176,7 +176,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="@php echo App\Models\User::all()->count();@endphp" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{  App\Models\User::all()->count();}}" data-purecounter-duration="1" class="purecounter"></span>
               <p>أولياء الامور</p>
             </div>
           </div>
@@ -184,7 +184,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="@php echo App\Models\Diseas::all()->count();@endphp" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{  App\Models\Diseas::all()->count();}}" data-purecounter-duration="1" class="purecounter"></span>
               <p>الامراض</p>
             </div>
           </div>
@@ -210,27 +210,48 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Departments</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>مرض اضطراب طيف التوحد</h2>
+          <p>
+
+            اضطراب طيف التوحد عبارة عن حالة ترتبط بنمو الدماغ وتؤثر على كيفية تمييز الشخص للآخرين والتعامل معهم على المستوى الاجتماعي، مما يتسبب في حدوث مشكلات في التفاعل والتواصل الاجتماعي. كما يتضمن الاضطراب أنماط محدودة ومتكررة من السلوك. يُشير مصطلح "الطيف" في عبارة اضطراب طيف التوحد إلى مجموعة كبيرة من الأعراض ومستويات الشدة.
+يتضمن اضطراب طيف التوحد حالات كانت تعتبر منفصلة في السابق — التوحد، ومتلازمة أسبرجر، واضطراب التحطم الطفولي وأحد الأشكال غير المحددة للاضطراب النمائي الشامل. لا زال بعض الأفراد يستخدمون مصطلح "متلازمة أسبرجر"، والتي يعتقد بوجه عام أنها تقع على الطرف المعتدل من اضطراب طيف التوحد.
+يبدأ اضطراب طيف التوحد في مرحلة الطفولة المبكرة ويتسبب في نهاية المطاف في حدوث مشكلات على مستوى الأداء الاجتماعي — على الصعيد الاجتماعي، في المدرسة والعمل، على سبيل المثال. غالبًا ما تظهر أعراض التوحد على الأطفال في غضون السنة الأولى. يحدث النمو بصورة طبيعية على ما يبدو بالنسبة لعدد قليل من الأطفال في السنة الأولى، ثم يمرون بفترة من الارتداد بين الشهرين الثامن عشر والرابع والعشرين من العمر عندما تظهر عليهم أعراض التوحد.
+
+في حين لا يوجد علاج لاضطراب طيف التوحد، إلا أن العلاج المكثف المبكر قد يؤدي إلى إحداث فارق كبير في حياة العديد من الأطفال.
+
+          </p>
         </div>
 
-        <div class="row gy-4">
+        <div class="row gy-4" style=" text-align: right;">
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">الأعراض</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">التواصل والتفاعل الاجتماعي</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">أنماط السلوك</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">متى تزور الطبيب</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">المضاعفات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">عوامل الخطر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-7">
+                    علاجات تركز على مساعدة طفلك
+                    </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-8">
+                    بعض لأسئلة التالية التي يتم تطبيقها بالبرمجة
+                    </a>
               </li>
             </ul>
           </div>
@@ -239,63 +260,189 @@
               <div class="tab-pane active show" id="tab-1">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Cardiology</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    <h3>الأعراض</h3>
+                    <p class="fst-italic">تظهر بعض علامات اضطراب طيف التوحد على الأطفال في مرحلة الطفولة المبكرة، مثل قلة الاتصال بالعين أو عدم الاستجابة لاسمهم أو عدم الاكتراث لمقدمي الرعاية. قد ينمو أطفال آخرون بشكل طبيعي خلال الأشهر أو السنوات القليلة الأولى من عمرهم، لكنهم يصبحون فجأة انطوائيين أو عدوانين أو يفقدون المهارات اللغوية التي قد اكتسبوها بالفعل. عادة ما تظهر العلامات عند عمر عامين.</p>
+                    <p>من المرجح أن يكون لكل طفل يعاني من اضطراب طيف التوحد نمطًا فريدًا من السلوك ومستوى الخطورة — من الأداء المنخفض إلى الأداء العالي.
+
+                        يعاني بعض الأطفال الذين يعانون اضطراب طيف التوحد صعوبة في التعلم، وبعضهم لديه علامات أقل من الذكاء المعتاد. يتراوح معدل ذكاء الأطفال الآخرون الذين يعانون هذا الاضطراب من طبيعي إلى مرتفع — حيث إنهم يتعلمون بسرعة، إلا أن لديهم مشكلة في التواصل وتطبيق ما يعرفونه في الحياة اليومية والتكيف مع المواقف الاجتماعية.
+
+                        يمكن في بعض الأحيان أن تكون الشدة صعبة التحديد، بسبب المزيج الفريد للشعور بالأعراض في كل طفل. حيث إنها تعتمد بشكل عام على مستوى حالات الضعف وكيفية تأثيرها على قدرة القيام بالوظائف.
+
+                        ترد أدناه بعض العلامات الشائعة التي يُظهرها الأشخاص الذين يعانون اضطراب طيف التوحد
+                        </p>
                   </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
-                  </div>
+
                 </div>
               </div>
               <div class="tab-pane" id="tab-2">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi</h3>
-                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                    <h3>التواصل والتفاعل الاجتماعي </h3>
+                    <p class="fst-italic">
+                        قد يعاني طفل أو شخص بالغ مصاب باضطراب طيف التوحد من مشاكل في التفاعل الاجتماعي ومهارات التواصل، بما في ذلك أي من العلامات التالية:
+
+                        عدم استجابة الطفل عند مناداته باسمه أو يبدو كأنه لا يسمعك في بعض الأوقات
+                        يرفض العناق والإمساك به، ويبدو أنه يفضل اللعب بمفرده؛ أي ينسحب إلى عالمه الخاص
+                        ضعف التواصل البصري، وغياب تعبيرات الوجه
+                        عدم الكلام أو التأخر في الكلام، أو قد يفقد الطفل قدرته السابقة على التلفظ بالكلمات والجمل
+                        عدم القدرة على بدء محادثة أو الاستمرار فيها أو قد يبدأ المحادثة للإفصاح عن طلباته أو
+                        تسمية الأشياء فحسب
+                    </p>
+                    <p>
+                    يتكلم بنبرة أو إيقاع غير طبيعي؛ وقد يستخدم صوتًا رتيبًا أو يتكلم مثل الإنسان الآلي
+                    يكرر الكلمات أو العبارات الحرفية، ولكن لا يفهم كيفية استخدامها
+                    يبدو ألا يفهم الأسئلة أو التوجيهات البسيطة
+                    لا يعبر عن عواطفه أو مشاعره، ويبدو غير مدرك لمشاعر الآخرين
+                    لا يشير إلى الأشياء أو يجلبها لمشاركة اهتماماته
+                    يتفاعل اجتماعيًا على نحو غير ملائم بأن يكون متبلدًا أو عدائيًا أو مخرّبًا
+                    لديه صعوبة في التعرف على الإشارات غير اللفظية، مثل تفسير تعبيرات الوجه الأخرى للأشخاص أو وضع الجسم أو لهجة الصوت
+
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-3">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                    <h3>أنماط السلوك</h3>
+                    <p class="fst-italic">قد يعاني طفل أو شخص بالغ مصاب باضطراب طيف التوحد من مشاكل في الأنماط السلوكية المحدودة والمتكررة أو الاهتمام أو الأنشطة، بما في ذلك أي من العلامات التالية:
+
+                    </p>
+                    <p>
+                يقوم الطفل بحركات متكررة، مثل التأرجح أو الدوران أو رفرفة اليدين
+                قد يقوم بأنشطة من الممكن أن تسبب له الأذى، مثل العض أو ضرب الرأس
+                يضع إجراءات أو طقوسًا معينة، وينزعج عندما يطرأ عليها أدنى تغيير
+                يعاني من مشكلات في التناسق أو لديه أنماط حركية غريبة، مثل حركات غير متزنة أو السير على أصابع القدمين، ولديه لغة جسد غريبة أو متصلبة أو مبالغ فيها
+                قد ينبهر من تفاصيل شيء ما، مثل العجلات التي تدور في السيارة اللعبة، ولكن لا يدرك الصورة المجملة لهذا الشيء أو وظيفته
+                قد يكون حساسًا بشكل غير عادي تجاه الضوء والصوت واللمس، وعلى الرغم من ذلك لا يبالي للألم أو الحرارة
+                لا تشغله ألعاب التقليد أو اللعب التخيلي
+                قد ينبهر بجسم أو نشاط ما بحماسة أو تركيز غير طبيعيين
+                قد تكون لديه تفضيلات معينة من الأطعمة، مثل تناول القليل من الأطعمة فحسب أو رفض تناول الأطعمة ذات ملمس معين
+                عندما يكبر الأطفال المصابون باضطراب طيف التوحد، تتحسن حالتهم ويصبحون أكثر اجتماعية ويظهرون سلوكًا اضطرابيًا أقل. يمكن لبعض المصابين الذين يعانون أعراض أقل شدة أن يعيشوا حياة طبيعية أو شبه طبيعية. ومع ذلك، يستمر البعض في مواجهة صعوبة في المهارات اللغوية أو الاجتماعية، ويمكن أن تزداد المشاكل السلوكية والانفعالية سوءًا في فترة المراهقة.
+
+                 </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-4">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                    <h3>متى تزور الطبيب</h3>
+                    <p class="fst-italic">ينمو الأطفال بوتيرة خاصة بهم، ولا يتبع العديد منهم المواعيد الدقيقة المذكورة في بعض كتب الأبوة والأمومة. ولكن عادةً ما يظهر على الأطفال المصابين باضطراب طيف التوحد بعض علامات تأخر النمو قبل بلوغ الثانية من العمر.
+
+                        في حالة الشعور بقلق حيال نمو الطفل أو الاشتباه في إمكانية إصابة الطفل باضطراب طيف التوحد، يرجى الإعراب عن مخاوفك للطبيب. كما أن الأعراض المرتبطة بالاضطراب قد تكون مرتبطةكذلك باضطرابات النمو الأخرى.
+                        </p>
+                    <p>
+                    غالبًا ما تظهر علامات اضطراب طيف التوحد مبكرًا في مرحلة النمو عندما يكون هناك تأخر واضح في مهارات اللغة والتفاعلات الاجتماعية. ربما يوصي الطبيب بإجراء اختبارات النمو لتحديد ما إذا كان الطفل يعاني تأخرًا في المهارات الإدراكية والاجتماعية ومهارات اللغة أم لا، إذا كان الطفل:
+
+                    لا يستجيب بابتسامة أو بتعبير عن السعادة ببلوغه الشهر السادس
+                    لا يقلد الأصوات أو تعبيرات الوجه ببلوغه الشهر التاسع
+                    لا يتلعثم بالكلام أو يصدر صوتًا ببلوغه الشهر الثاني عشر
+                    لا يومئ بحركات — مثل الإشارة أو التلويح باليد — ببلوغه الشهر الرابع عشر
+                    لا ينطق كلمات متفرقة ببلوغه الشهر السادس عشر
+                    لا يلعب ألعاب "التخيل" أو التظاهر ببلوغه الشهر الثامن عشر
+                    لا ينطق عبارات تتألف من كلمتين ببلوغه الشهر الرابع والعشرين
+                    يفقد مهارات اللغة أو المهارات الاجتماعية في أي عمر.
+
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
+
               <div class="tab-pane" id="tab-5">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                    <h3>المضاعفات</h3>
+                    <p class="fst-italic">يمكن أن تؤدي المشكلات المتعلقة بالتفاعل الاجتماعية والتواصل والسلوك إلى ما يلي:.</p>
+                    <p>
+                    مشاكل بالمدرسة وذات صلة بالتعلم الناجح
+                    مشاكل وظيفية
+                    عدم القدرة على العيش باستقلالية
+                    العزل الاجتماعي
+                    الضغط النفسي داخل الأسرة
+                    الوقوع ضحية والتعرض للتنمر
+
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
+
+              <div class="tab-pane" id="tab-6">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>عوامل الخطر</h3>
+                    <p class="fst-italic">وتشمل عوامل خطر خلل القراءة:
+
+                        تاريخ عائلي لخلل القراءة أو صعوبات التعلم الأخرى
+                        الولادة المبكرة أو انخفاض الوزن عند الولادة
+                        التعرض أثناء الحمل إلى النيكوتين أو المخدرات أو الكحول أو العدوى التي قد تغير نمو الدماغ في الجنين
+                        الاختلافات الفردية في أجزاء من المخ التي تمكنّهم من القراءة
+                        المضاعفات
+                    </p>
+                    <p>
+
+                مشكلات التعلم. نظرًا لأن القراءة تمثل مهارة أساسية لمعظم المواد الدراسية الأخرى، يكون الطفل الذي يعاني خلل القراءة في وضع غير مناسب في معظم الصفوف الدراسية، وربما يواجه صعوبة في مواكبة أقرانه.
+                المشكلات الاجتماعية. قد يؤدي عدم علاج خلل القراءة إلى انخفاض تقدير الذات ومشاكل السلوك والقلق والعدوانية والانسحاب من محيط الأصدقاء والآباء والمعلمين.
+                مشكلات البالغين. إن عدم القدرة على القراءة والفهم يمكن أن يمنع الطفل من إبراز قدراته مع مراحل النمو. ويمكن أن يكون لذلك عواقب تعليمية واجتماعية واقتصادية طويلة الأمد.
+                يكون الأطفال الذين يعانون خلل القراءة أكثر عرضة لخطر الإصابة باضطراب نقص الانتباه مع فرط النشاط (ADHD)، والعكس. يمكن أن يسبب اضطراب نقص الانتباه مع فرط النشاط صعوبة في مواصلة الانتباه، فضلاً عن فرط الحركة والسلوك المتهور، مما قد يجعل خلل القراءة أكثر صعوبة في العلاج.
+
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-7">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>
+                        علاجات تركز على مساعدة طفلك
+                        </h3>
+                    <p class="fst-italic">تعلم التعرف على أصغر الأصوات التي تُشكل الكلمات (الصوتيات) واستخدامها
+                        فهم أن الحروف وسلاسل الحروف تمثل هذه الأصوات والكلمات (السمعيات)
+                        فهم ما يقرأه
+
+                    </p>
+                    <p>
+                        القراءة بصوت عالٍ لتعزز دقة القراءة، والسرعة، والتعبير (الطلاقة)
+                        بناء المفردات من الكلمات المعترف بها والمفهومة
+                        إن كان الأمر متاحًا، يمكن أن تكون جلسات التدريس مع أخصائي القراءة مفيدة للعديد من الأطفال المصابين بعسر القراءة. إذا كان طفلك يعاني من حالة شديدة من عجز القراءة، فقد تكون هناك حاجة إلى تكرار الدروس أكثر، وقد يكون التقدم أبطأ.
+
+
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-8">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>بعض لأسئلة التالية التي يتم تطبيقها بالبرمجة
+                        </h3>
+                    <p class="fst-italic">متى لاحظت أول مرة طفلك يعاني مشاكل في القراءة؟ هل أشار مدرس انتباهك لهذا الأمر؟  </p>
+                    <p> كيف هو أداء طفلك على المستوى الأكاديمي في الفصل الدراسي؟</p>
+                    <p>كيف هو أداء طفلك على المستوى الأكاديمي في الفصل الدراسي؟</p>
+                    <p> متى بدأ طفلك بالكلام أول مرة؟</p>
+                    <p>هل جربت خوض أي إجراءات تدخلية لتحسين القراءة؟ إذا كان الأمر كذلك، فأي منهم؟</p>
+                    <p>هل لاحظت أي مشكلات سلوكية أو صعوبات اجتماعية شككت في ارتباطها بمشكلة طفلك في القراءة؟</p>
+                    <p>هل يعانى طفلك أي مشاكل في الرؤية؟</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -463,7 +610,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>DGQS</span> 2022</strong>. All Rights Reserved
         </div>
         <div class="credits">
 
