@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.pages.statistics');
+    return view('users.pages.landingPage');
 });
 Route::get(' ', function () {
-    return view('users.pages.statistics');
+    return view('users.pages.landingPage');
 });
 
 
@@ -36,4 +36,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/user')->group(function () {
 
     Route::get('/Diagnosis', [App\Http\Controllers\DiagnosisController::class, 'index'])->name('Diagnosis');
+
+    Route::get('/videos', function () {
+        return view('users.pages.videos');
+    });
 });
