@@ -32,7 +32,7 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
                     <h4>الالعاب التفاعليه</h4>
-                    <p>خليك ومزيج بي الالعاب المخصصه لصغار السن </p>
+                    <p>خليط ومزيج بي الالعاب المخصصه لصغار السن </p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
