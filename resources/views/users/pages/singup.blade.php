@@ -12,10 +12,8 @@
   <section id="why-us" class="appointment section-bg" style=" margin-bottom: 200px; ">
     <div class="container">
 
-      <form method="POST" action="" class="php-email-form" >
+      <form action="{{route('NewAcount')}}" method="POST" >
         @csrf
-
-
 
         <div class="row  justify-content-center">
 
@@ -49,7 +47,14 @@
                 @enderror
               </div>
 
+              <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="password" class="form-control" name="password" id="password" placeholder=" كلمة السر">
+                    <label for="password">{{' كلمة السر'}}</label>
+                </div>
+            </div>
 
+        </div>
 
           <div class="row  justify-content-center">
             <div class="col-md-4 form-group mt-3 mt-md-0">
@@ -81,6 +86,19 @@
                 </span>
                 @enderror
               </div>
+
+
+
+            <div class="row mb-3 mt-3">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                <label class="form-check-label" for="remember">
+                    {{ __('هل يتبع الي اي منظمه ؟') }}
+                </label>
+            </div>
+        </div>
           </div>
 
           <div class="row mt-5"  style=" text-align: right;">
@@ -91,7 +109,7 @@
             </div>
         </div>
 
-
+    </form>
 
 
     </div>

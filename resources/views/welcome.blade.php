@@ -58,12 +58,17 @@
           <li><a href="{{url('/user/videos')}}" class="{{ Request::is('/user/videos') ? ' active text-primary' : ' ' }}  nav-link  ">فيدويهات</a></li>
 
 
-         <li><a href="{{url('/user/loginUser')}}" class="{{ Request::is('/user/loginUser') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل دخول</a></li>
-         <li><a href="{{url('/user/singupuser')}}" class="{{ Request::is('/user/singupuser') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل حساب </a></li>
-         @auth
-         <li><a href="{{url('/user/videos')}}" class="{{ Request::is('/user/videos') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل خروح </a></li>
-         @endauth
 
+
+         @if (Auth::check())
+         <li><a href="{{url('/user/userlogout')}}" class="{{ Request::is('/user/userlogout') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل خروح    </a></li>
+
+       @else
+       <li><a href="{{url('/user/loginUser')}}" class="{{ Request::is('/user/loginUser') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل دخول</a></li>
+         <li><a href="{{url('/user/singupuser')}}" class="{{ Request::is('/user/singupuser') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل حساب </a></li>
+
+       @endif
+       <li><a href="{{url('/admin/login')}}" class="nav-link text-primary ">تسجيل كمشرف نظام</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -102,7 +107,6 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  @livewireScripts
 
   <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/purecounter/purecounter.js')}}"></script>
@@ -115,5 +119,7 @@
   <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
-
+@jquery
+@toastr_js
+@toastr_render
 </html>

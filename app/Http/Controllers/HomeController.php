@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('users.pages.statistics');
+        return view('users.pages.landingPage');
     }
 }
