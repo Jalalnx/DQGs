@@ -33,6 +33,7 @@ Route::group(['namespace' => 'admin',], function () {
 
 
         Route::get('Result', [App\Http\Controllers\admin\ResultController::class, 'index'])->name("admin.Result");
+        Route::get('Result/list', [App\Http\Controllers\admin\ResultController::class, 'Result_Ftech'])->name("Result.list");
 
 
 });
