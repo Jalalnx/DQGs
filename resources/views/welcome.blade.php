@@ -130,11 +130,10 @@
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script>
-
-
-
-    $("input[type=radio]").change(function(){
-
+// Syntax error, unrecognized expression: input[type=radio].#radio
+// $(this).find('input[id^=radio,type=radio]')
+$('input').filter('[id^=radio][type=radio]').change(function(){
+        console.log(1);
     if(this.checked)
     {
    let x = $(this).val();
@@ -147,6 +146,7 @@
                 "progressBar" : true
                 }
                 toastr.success("أجابه صحيحه");
+                console.log(1);
                 break;
                 case '1':
                 toastr.options =
@@ -155,6 +155,7 @@
                 "progressBar" : true
                 }
                 toastr.warning("حاول مجددا ");
+                console.log(1);
                 break;
             }
     }

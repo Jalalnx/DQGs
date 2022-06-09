@@ -55,14 +55,14 @@
 
           <div class="d-flex m-2  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input radio" type="radio" name="game1-img2" value="1" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game1-img2" value="1" >
             <label class="form-check-label" for="game1-img2">كوبي</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input radio" type="radio" name="game1-img2" value="0" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img2" value="0" >
             <label class="form-check-label" for="game1-img2">احمر</label>
             </div>
-            <input class="form-check-input radio" type="radio" name="game1-img2" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img2" value="1" >
             <label class="form-check-label" for="game1-img2">برتقالي</label>
             </div>
             </div>
@@ -78,14 +78,14 @@
 
           <div class="d-flex m-2  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input radio" type="radio" name="game1-img3" value="0" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game1-img3" value="0" >
             <label class="form-check-label" for="game1-img3">أصفر</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input radio" type="radio" name="game1-img3" value="1" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game1-img3" value="1" >
             <label class="form-check-label" for="game1-img3">أبيض</label>
             </div>
-            <input class="form-check-input radio" type="radio" name="game1-img3" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img3" value="1" >
             <label class="form-check-label" for="game1-img3">احمر</label>
             </div>
             </div>
@@ -122,15 +122,15 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game2-img1" value="0" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game2-img1" value="0" >
             <label class="form-check-label" for="game2-img1">صبار</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game2-img1" value="1" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game2-img1" value="1" >
             <label class="form-check-label" for="game2-img1">موز</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game2-img1"value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game2-img1"value="1" >
             <label class="form-check-label" for="game2-img1">تفاح</label>
             </div>
             </div>
@@ -145,14 +145,14 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game2-img2" value="0" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game2-img2" value="0" >
             <label class="form-check-label" for="game2-img2">شجر زينه</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game2-img2" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game2-img2" value="1" >
             <label class="form-check-label" for="game2-img2">شجر ظل</label>
             </div>
-            <input class="form-check-input" type="radio" name="game2-img2" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game2-img2" value="1" >
             <label class="form-check-label" for="game2-img2">شجر ثمار</label>
             </div>
             </div>
@@ -187,15 +187,15 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game3-img1" value="0" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img1" value="0" >
             <label class="form-check-label" for="game3-img1">فيل</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game3-img1" value="1" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game3-img1" value="1" >
             <label class="form-check-label" for="game3-img1">وحيد قرن</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game3-img1"value="1" >
+            <input class="form-check-input radio" id="radio"  type="radio" name="game3-img1"value="1" >
             <label class="form-check-label" for="game3-img1">قرد</label>
             </div>
             </div>
@@ -210,14 +210,14 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game3-img2" value="0" >
+            <input class="form-check-input radio"  id="radio" type="radio" name="game3-img2" value="0" >
             <label class="form-check-label" for="game3-img2"> اسد</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game3-img2" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img2" value="1" >
             <label class="form-check-label" for="game3-img2"> فهد</label>
             </div>
-            <input class="form-check-input" type="radio" name="game3-img2" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img2" value="1" >
             <label class="form-check-label" for="game3-img2"> ثعلب</label>
             </div>
             </div>
@@ -233,15 +233,15 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game3-img3" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img3" value="1" >
             <label class="form-check-label" for="game3-img3">جداده</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game3-img3" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img3" value="1" >
             <label class="form-check-label" for="game3-img3">صقر</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game3-img3"value="0" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game3-img3"value="0" >
             <label class="form-check-label" for="game3-img3">عصفور</label>
             </div>
             </div>
@@ -275,15 +275,15 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game4-img1" value="0" >
+            <input class="form-check-input radio" type="radio" name="game4-img1" value="0" >
             <label class="form-check-label" for="game4-img1">كعكه</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game4-img1" value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img1" value="1" >
             <label class="form-check-label" for="game4-img1"> بسكويت</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game4-img1"value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img1"value="1" >
             <label class="form-check-label" for="game4-img1">مثلجات</label>
             </div>
             </div>
@@ -298,14 +298,14 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game4-img2" value="0" >
+            <input class="form-check-input radio" type="radio" name="game4-img2" value="0" >
             <label class="form-check-label" for="game4-img2"> خضروات</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game4-img2" value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img2" value="1" >
             <label class="form-check-label" for="game4-img2"> فواكه</label>
             </div>
-            <input class="form-check-input" type="radio" name="game4-img2" value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img2" value="1" >
             <label class="form-check-label" for="game4-img2"> لحوم</label>
             </div>
             </div>
@@ -321,15 +321,15 @@
 
           <div class="d-flex m-5  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game4-img3" value="0" >
+            <input class="form-check-input radio" type="radio" name="game4-img3" value="0" >
             <label class="form-check-label" for="game4-img3">فواكه</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game4-img3" value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img3" value="1" >
             <label class="form-check-label" for="game4-img3">بيض</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game4-img3"value="1" >
+            <input class="form-check-input radio" type="radio" name="game4-img3"value="1" >
             <label class="form-check-label" for="game4-img3">جبنه</label>
             </div>
             </div>
@@ -397,23 +397,5 @@
     </div>
   </section><!-- End Gallery Section -->
 
-<script>
 
-    // $("radio").change(function(){ // bind a function to the change event
-    //     if( $(this).is(":checked") ){ // check if the radio is checked
-    //         var val = $(this).val(); // retrieve the value
-
-    //         switch (val){
-    //             case 0:
-    //             alert("أجابه صحيحه");
-    //             break;
-    //             case 1:
-    //             alert("حاول مجددا  ");
-    //             break;
-    //         }
-    //     }
-    // });
-
-  
-</script>
 @endsection
