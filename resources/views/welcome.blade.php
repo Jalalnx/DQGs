@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body >
 
 
   <!-- ======= Header ======= -->
@@ -131,13 +131,35 @@
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script>
 
-$(document).ready(function() {
 
 
-    // document.querySelector("#stop").click(function(e){
-    //     e.preventDefault() // Don't post the form, unless confirmed
-    //     $(e.target).closest('form').submit();
-    // });
+    $("input[type=radio]").change(function(){
+
+    if(this.checked)
+    {
+   let x = $(this).val();
+
+            switch (x){
+                case '0':
+                toastr.options =
+                {
+                "closeButton" : true,
+                "progressBar" : true
+                }
+                toastr.success("أجابه صحيحه");
+                break;
+                case '1':
+                toastr.options =
+                {
+                "closeButton" : true,
+                "progressBar" : true
+                }
+                toastr.warning("حاول مجددا ");
+                break;
+            }
+    }
+
+    });
 
     @if(Session::has('message'))
     toastr.options =
@@ -174,7 +196,7 @@ $(document).ready(function() {
     }
             toastr.warning("{{ session('warning') }}");
     @endif
-} );
+
 
 
   </script>

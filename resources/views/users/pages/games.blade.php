@@ -32,15 +32,15 @@
 
           <div class="d-flex m-2  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game1-img1" value="0" >
-            <label class="form-check-label" for="game1-img1">اخضر</label>
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img1" value="0" >
+            <label class="form-check-label " for="game1-img1">اخضر</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game1-img1" value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img1" value="1" >
             <label class="form-check-label" for="game1-img1">احمر</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game1-img1"value="1" >
+            <input class="form-check-input radio" id="radio" type="radio" name="game1-img1"value="1" >
             <label class="form-check-label" for="game1-img1">بنفسجي</label>
             </div>
             </div>
@@ -55,14 +55,14 @@
 
           <div class="d-flex m-2  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game1-img2" value="1" >
+            <input class="form-check-input radio" type="radio" name="game1-img2" value="1" >
             <label class="form-check-label" for="game1-img2">كوبي</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game1-img2" value="0" >
+            <input class="form-check-input radio" type="radio" name="game1-img2" value="0" >
             <label class="form-check-label" for="game1-img2">احمر</label>
             </div>
-            <input class="form-check-input" type="radio" name="game1-img2" value="1" >
+            <input class="form-check-input radio" type="radio" name="game1-img2" value="1" >
             <label class="form-check-label" for="game1-img2">برتقالي</label>
             </div>
             </div>
@@ -78,14 +78,14 @@
 
           <div class="d-flex m-2  flex-row">
             <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="game1-img3" value="0" >
+            <input class="form-check-input radio" type="radio" name="game1-img3" value="0" >
             <label class="form-check-label" for="game1-img3">أصفر</label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="game1-img3" value="1" >
+            <input class="form-check-input radio" type="radio" name="game1-img3" value="1" >
             <label class="form-check-label" for="game1-img3">أبيض</label>
             </div>
-            <input class="form-check-input" type="radio" name="game1-img3" value="1" >
+            <input class="form-check-input radio" type="radio" name="game1-img3" value="1" >
             <label class="form-check-label" for="game1-img3">احمر</label>
             </div>
             </div>
@@ -398,32 +398,22 @@
   </section><!-- End Gallery Section -->
 
 <script>
-$(document).ready(function() {
 
-//  document.getElementsByTagName('input').change(function(){
+    // $("radio").change(function(){ // bind a function to the change event
+    //     if( $(this).is(":checked") ){ // check if the radio is checked
+    //         var val = $(this).val(); // retrieve the value
 
-//         if( $(this).is(":checked") ){
+    //         switch (val){
+    //             case 0:
+    //             alert("أجابه صحيحه");
+    //             break;
+    //             case 1:
+    //             alert("حاول مجددا  ");
+    //             break;
+    //         }
+    //     }
+    // });
 
-//             var val = $(this).val();
-
-//             switch (val){
-//                 case 0:
-//                 alert("أجابه صحيحه");
-//                 break;
-//                 case 1:
-//                 alert("حاول مجددا  ");
-//                 break;
-//             }
-
-//         }
-//     });
-
-if($("input[type='radio'].radioBtnClass").is(':checked')) {
-    var card_type = $("input[type='radio'].radioBtnClass:checked").val();
-    alert(card_type);
-}
-
-
-});
+  
 </script>
 @endsection
