@@ -29,6 +29,7 @@ class DiagnosisController extends Controller
      if($this->resulte > $request->Diagnosis)
      {
 
+       toastr()->error('طفلك مصاب  ');
      $Result =  Result::create(
        ["user_id" => \Auth::user()->id]+
          $request->only("diseas_id")+[
@@ -37,6 +38,7 @@ class DiagnosisController extends Controller
          ]);
      return back()->with($request->name, '   % مصاب    '.$this->resulte);
      }else{
+        toastr()->info(' طفلك غير مصاب ');
 
         $Result =  Result::create(
             ["user_id" => \Auth::user()->id]+
@@ -57,7 +59,7 @@ class DiagnosisController extends Controller
         $this->temp +=$Value;
 
         $meta_data = Question::where('diseas_id',$id)->count();
-      return  $this->resulte =(($this->temp/ $meta_data) * 100)+0.01;
+      return  $this->resulte =(($this->temp/ $meta_data) * 100);
 
 
     }

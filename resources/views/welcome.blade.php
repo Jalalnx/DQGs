@@ -51,11 +51,11 @@
             <path d="M8 4.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm3.5.878c1.482-1.42 4.795 1.392 0 4.622-4.795-3.23-1.482-6.043 0-4.622ZM2.5 5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Z"/>
             <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Z"/>
           </svg></a></li>
-          <li><a href="{{url('user/Diagnosis')}}" class=" {{ Request::is('/user/Diagnosis') ? '  active text-primary' : ' ' }} nav-link"> تحاليل   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+          <li><a href="{{url('user/Diagnosis')}}" class=" {{ Request::is('user/Diagnosis') ? '  active text-primary' : ' ' }} nav-link"> تحاليل   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
           </svg> </a></li>
-          <li><a class="nav-link " href="#departments">ألالعاب</a></li>
-          <li><a href="{{url('/user/videos')}}" class="{{ Request::is('/user/videos') ? ' active text-primary' : ' ' }}  nav-link  ">فيدويهات</a></li>
+          <li><a a href="{{url('user/games')}}" class="{{ Request::is('user/games') ? ' active text-primary' : ' ' }}  nav-link ">ألالعاب</a></li>
+          <li><a href="{{url('user/videos')}}" class="{{ Request::is('user/videos') ? ' active text-primary' : ' ' }}  nav-link  ">فيدويهات</a></li>
 
 
 
@@ -108,6 +108,9 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
+  @jquery
+@toastr_js
+@toastr_render
   <!-- Vendor JS Files -->
   <script src="{{asset('assets/vendor/purecounter/purecounter.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -134,7 +137,7 @@ $(document).ready(function() {
     // document.querySelector("#stop").click(function(e){
     //     e.preventDefault() // Don't post the form, unless confirmed
     //     $(e.target).closest('form').submit();
-    });
+    // });
 
     @if(Session::has('message'))
     toastr.options =
@@ -178,7 +181,5 @@ $(document).ready(function() {
 
 <script>
 </body>
-@jquery
-@toastr_js
-@toastr_render
+
 </html>

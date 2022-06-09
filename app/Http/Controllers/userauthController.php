@@ -37,10 +37,7 @@ class userauthController extends Controller
 
    public function submit(Request $request)
    {
-
-       // dd($request);
-
-
+    //    dd($request);
        $request->validate([
            'email' => 'required|email',
            'password' => 'required|min:6'
@@ -49,7 +46,7 @@ class userauthController extends Controller
 
        if (\Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
         toastr()->info('تم تسجيل الدخول بنجاح ');
-        return redirect()->route('loginUser');
+        return redirect()->route('Diagnosis');
        }
        toastr()->error('حطاء في البيانات المرفقه ');
        return redirect()->route('Diagnosis');

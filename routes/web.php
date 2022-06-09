@@ -57,5 +57,9 @@ Route::prefix('/user')->group(function () {
 
     Route::get('/videos', function () {
         return view('users.pages.videos');
-    });
+    })->name('videos');
+
+    Route::get('/games', function () {
+        return view('users.pages.games');
+    })->name('games');
 });

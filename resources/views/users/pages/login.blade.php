@@ -13,7 +13,7 @@
   <section id="appointment" class="appointment section-bg" style=" margin-bottom: 200px; ">
     <div class="container">
 
-      <form method="POST" action="{{route('attemptLogin')}}" class="php-email-form" >
+      <form method="POST" action="{{route('attemptLogin')}}">
         @csrf
         <div class="row  justify-content-center">
 
