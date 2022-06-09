@@ -47,14 +47,10 @@
                 @enderror
               </div>
 
-              <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="password" class="form-control" name="password" id="password" placeholder=" كلمة السر">
-                    <label for="password">{{' كلمة السر'}}</label>
-                </div>
-            </div>
+
 
         </div>
+
 
           <div class="row  justify-content-center">
             <div class="col-md-4 form-group mt-3 mt-md-0">
@@ -78,7 +74,7 @@
               </div>
 
               <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input style=" text-align: right;" type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="  البريد الالكتروني " >
+                <input style=" text-align: right;" type="email" class="form-control " name="email" id="email" placeholder="  البريد الالكتروني " >
                 <div class="validate"></div>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -87,9 +83,17 @@
                 @enderror
               </div>
 
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+
+                    <input type="password" class="form-control" name="password" id="password" placeholder=" كلمة السر">
+                    <label for="password">{{' كلمة السر'}}</label>
+                
+            </div>
+
 
 
             <div class="row mb-3 mt-3">
+
         <div class="col-md-6 offset-md-4">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -102,6 +106,7 @@
           </div>
 
           <div class="row mt-5"  style=" text-align: right;">
+
             <div class="">
                 <button type="submit" class="btn btn-primary" >
                     {{ __('تسجيل حساب') }}
