@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Question;
 use App\Models\Result;
+use \App\Jobs\ProcessPodcast;
+use \App\Jobs\SendEmails;
 
 class DiagnosisController extends Controller
 {
@@ -22,24 +24,9 @@ class DiagnosisController extends Controller
 
     public function DiagnosisCal(Request $request){
 
-        $emailcontent = array (
-            'subject' => 'الدعم الفني',
-            'emailmessage' => 'شكرا لك لتجربة خدمات الموقع وتجربة الاسئله والجلوس الاختبارات سوف نعمل علي تحسين الموقع'
-            );
-            Mail::send('email.email_template', $emailcontent, function($message)
-            {
-                // \Auth::user()->email
-            $message->to("moogdaroat99@gmail.com",'Daroat From DQGs')
-            ->subject('Thanks for Give me a try');
-            });
+        // $mail = new SendEmails('moogdaroat99@gmail.com');
 
-            if (Mail::failures()) {
-
-                toastr()->info(' مشكلة في ارسل الايميل ');
-
-           }else{
-                toastr()->info('Successfully send in your mail');
-              }
+        SendEmails::dispatch('moogdaroat99@gmail.com');
 
        $this->resulte = $this->calcate($request->SelectedAnswers,$request->diseas_id);
 

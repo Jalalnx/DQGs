@@ -3,7 +3,7 @@
 
 
 <section id="hero" class="d-flex align-items-center">
-    <div class="container" style=" text-align: right;">
+    <div class="container" style=" text-align: right; ">
       <h1>مرحبا بك  @if (Auth::check())   {{ \Auth::user()->parent_name }} @endif</h1>
       <h2>قسم الالعاب التفاعليه</h2>
 

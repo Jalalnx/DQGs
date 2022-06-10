@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
 
-    <title>DQGs</title>
+    <title>DQGs.com</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -23,7 +23,8 @@
 
 <body >
 
-    <div class="card shadow">
+    <div class="card shadow m-5 pt-5" style=" text-align: right;  border-radius: 20px; text-align: center;
+    justify-content: center;">
     <h1>   @if (Auth::check())   {{ \Auth::user()->parent_name }} @endif</h1>
    <div>  {{ $subject }}</div>
     <div> {{ $emailmessage }}</div>
