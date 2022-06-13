@@ -55,6 +55,10 @@ Route::prefix('/user')->group(function () {
       Route::get('/Diagnosis', [App\Http\Controllers\DiagnosisController::class, 'index'])->name('Diagnosis')->middleware('auth:web');;
       Route::post('/DiagnosisCal', [App\Http\Controllers\DiagnosisController::class, 'DiagnosisCal'])->name('DiagnosisCal')->middleware('auth:web');;
 
+    Route::get('/articale', function () {
+        return view('users.pages.articale');
+    })->name('articale');
+
     Route::get('/videos', function () {
         return view('users.pages.videos');
     })->name('videos');

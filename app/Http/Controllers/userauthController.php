@@ -7,6 +7,10 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use \App\Jobs\ProcessPodcast;
+use \App\Jobs\SendEmails;
+use Illuminate\Support\Carbon;
+
 class userauthController extends Controller
 {
 
@@ -45,6 +49,12 @@ class userauthController extends Controller
 
 
        if (\Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+
+        $job = (new SendEmails($request->email))
+        ->delay(Carbon::now()->addSeconds(30));
+
+        dispatch($job);
+
         toastr()->info('تم تسجيل الدخول بنجاح ');
         return redirect()->route('Diagnosis');
        }

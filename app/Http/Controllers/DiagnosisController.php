@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Question;
 use App\Models\Result;
-use \App\Jobs\ProcessPodcast;
-use \App\Jobs\SendEmails;
+
 
 class DiagnosisController extends Controller
 {
@@ -24,9 +23,7 @@ class DiagnosisController extends Controller
 
     public function DiagnosisCal(Request $request){
 
-        // $mail = new SendEmails('moogdaroat99@gmail.com');
 
-        SendEmails::dispatch('moogdaroat99@gmail.com');
 
        $this->resulte = $this->calcate($request->SelectedAnswers,$request->diseas_id);
 

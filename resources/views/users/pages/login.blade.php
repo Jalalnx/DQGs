@@ -17,7 +17,7 @@
         @csrf
         <div class="row  justify-content-center">
 
-          <div class="col-md-4 form-group mt-3 mt-md-0">
+          <div class="col-md-4 form-group mt-3 mb-3 mt-md-0">
             <input style=" text-align: right;" type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="البريد الاكتروني"  required autocomplete="email" autofocus data-rule="email" data-msg="أدخل بريد صالح">
             <div class="validate"></div>
             @error('email')
@@ -40,12 +40,20 @@
           </div>
         </div>
 
-        <div class="row justify-content-center " >
-            <div class="col-md-8 offset-md-4">
+        <div class=" row flex-colunm  justify-content-center " >
+
+            <div class="col-md-8  mt-3 offset-md-4">
                 <button type="submit" class="btn btn-primary" >
                     {{ __('تسجيل دخول') }}
                 </button>
             </div>
+
+
+            <div class= "col-md-2 offset-md-4">
+                <a href="{{url('/user/singupuser')}}" class="{{ Request::is('/user/singupuser') ? ' active text-primary' : ' ' }}  nav-link  ">تسجيل حساب </a>
+            </div>
+
+
         </div>
 
         </div>

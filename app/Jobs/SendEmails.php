@@ -29,7 +29,7 @@ class SendEmails implements ShouldQueue
             Mail::send('email.email_template', $emailcontent, function($message)
             {
                 // \Auth::user()->email
-            $message->to($this->email,'TEC support')
+            $message->to($this->email,\Auth::user()->parent_name)
             ->subject('DQGs Team');
             });
     }
@@ -38,15 +38,4 @@ class SendEmails implements ShouldQueue
 }
 
 
-    // public function handle()
-    // {
-    //     $subscribers = User::all()->toArray();
-
-    //     foreach ($subscribers as $subscriber)
-    //     {
-    //         \Mail::send('emails.blog', ['post' => $this->post, 'subscriber' => $subscriber], function ($m) use($subscriber) {
-    //             $m->to($subscriber['email'], $subscriber['name']);
-    //             $m->subject('A new article has been published.');
-    //         });
-    //     }
-    // }
+  

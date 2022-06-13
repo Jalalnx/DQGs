@@ -17,7 +17,7 @@
 
         <div class="row  justify-content-center">
 
-            <div class="col-md-4 form-group mt-3 mt-md-0">
+            <div class="col-md-4 form-group mt-3 mb-3 mt-md-0">
               <input style=" text-align: right;" type="text" class="form-control @error('parent_name') is-invalid @enderror" name="parent_name" id="parent_name" placeholder="ولي الامر" >
               <div class="validate"></div>
               @error('parent_name')
@@ -53,7 +53,7 @@
 
 
           <div class="row  justify-content-center">
-            <div class="col-md-4 form-group mt-3 mt-md-0">
+            <div class="col-md-4 form-group mt-3 mb-3 mt-md-0">
               <input style=" text-align: right;" type="text" class="form-control @error('address') is-invalid @enderror" name="address" id="address" placeholder=" عنوان السكن" >
               <div class="validate"></div>
               @error('address')
@@ -86,8 +86,8 @@
               <div class="col-md-4 form-group mt-3 mt-md-0">
 
                     <input type="password" class="form-control" name="password" id="password" placeholder=" كلمة السر">
-                    <label for="password">{{' كلمة السر'}}</label>
-                
+
+
             </div>
 
 
