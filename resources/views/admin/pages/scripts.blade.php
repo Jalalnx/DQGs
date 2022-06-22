@@ -20,6 +20,28 @@
 <script src="{{asset('js/sidebars.js')}}"></script>
 
 <script>
+
+imgInp.onchange = evt => {
+  const [file] = imgInp.files
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }
+}
+    </script>
+
+<script type="text/javascript">
+    var i = 0;
+    $("#add-btn").click(function() {
+        ++i;
+        $("#dynamicAddRemove").append('<tr> <td class="d-flex "><div class="col-9"><input type="text" required name="data['+i+'][option]" placeholder=" الاجابة"class="form-control" /></div><div class="col-2">  <div class=""><div class="col  d-flex"> <input class="form-check-input " value="0"id="checkbox" type="radio" name="data['+i+'][value]"> <label class="form-check-label m-2" for="game1-img2">صحيحه</label>  </div><div class="col d-flex">  <input class="form-check-input " value="1"  id="checkbox" type="radio" name="data['+i+'][value]"> <label class="form-check-label m-2" for="game1-img2">خاطئه</label>  </div> </div></td><td><button type="button" class="btn btn-danger remove-tr">حذف</button></td></tr>');
+    });
+    $(document).on('click', '.remove-tr', function() {
+        $(this).parents('tr').remove();
+    });
+
+</script>
+
+<script>
     $(document).ready(function() {
         toastr.options.timeOut = 10000;
         @if (Session::has('error'))

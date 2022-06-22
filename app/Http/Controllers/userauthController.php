@@ -46,15 +46,11 @@ class userauthController extends Controller
            'email' => 'required|email',
            'password' => 'required|min:6'
        ]);
-
-
        if (\Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
 
         $job = (new SendEmails($request->email))
-        ->delay(Carbon::now()->addSeconds(30));
-
+                       ->delay(Carbon::now()->addSeconds(30));
         dispatch($job);
-
         toastr()->info('تم تسجيل الدخول بنجاح ');
         return redirect()->route('Diagnosis');
        }

@@ -9,6 +9,25 @@
     </div>
   </section>
 
+  {{-- <div class="bg-white border border-transparent rounded hover:border-gray-100 hover:shadow">
+    <a href="{{ route('posts.show', $post) }}" class="block w-full p-8">
+        <div class="pb-6 text-xl font-semibold border-b">
+            {{ $post->title }}
+        </div>
+
+        <div class="mt-4">
+            {{ Str::limit($post->content, 300) }}
+        </div>
+    </a>
+</div>
+
+
+
+<div class="p-3 text-center">
+    <p>There are no posts yet.</p>
+</div>
+--}}
+
 
 
     <!-- ======= Departments Section ======= -->
@@ -730,7 +749,7 @@
                   </div>
                 </div>
 
-               
+
 
 
               </div>

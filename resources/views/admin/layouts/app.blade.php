@@ -152,16 +152,20 @@ ul > li a{
 </div>
 </div>
 
-
+@jquery
+@toastr_js
+@toastr_render
 {{-- @yield('custom_scripts')  --}}
+
+@include('admin.pages.scripts')
 @yield('script')
 
 
-@include('admin.pages.scripts')
 
 
 
           {{-- toastr js --}}
+
 
   </body>
 </html>
