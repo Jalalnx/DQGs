@@ -102,6 +102,12 @@
         </a>
       </li>
       <li>
+        <a href="{{url('admin/videos')}}" class="{{ Request::is('admin/videos') ? 'active' : '' }} nav-link link-dark">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+           الفيديوهات
+        </a>
+      </li>
+      <li>
            <a href="{{url('admin/Result')}}" class="{{ Request::is('admin/Result') ? 'active' : '' }} nav-link link-dark">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
           النتائج

@@ -55,15 +55,20 @@ Route::prefix('/user')->group(function () {
       Route::get('/Diagnosis', [App\Http\Controllers\DiagnosisController::class, 'index'])->name('Diagnosis')->middleware('auth:web');;
       Route::post('/DiagnosisCal', [App\Http\Controllers\DiagnosisController::class, 'DiagnosisCal'])->name('DiagnosisCal')->middleware('auth:web');;
 
-    Route::get('/articale', function () {
-        return view('users.pages.articale');
-    })->name('articale');
+    // Route::get('/articale', function () {
+    //     return view('users.pages.articale');
+    // })->name('articale');
 
     Route::get('/videos', function () {
         return view('users.pages.videos');
     })->name('videos');
 
-    Route::get('/games', function () {
-        return view('users.pages.games');
-    })->name('games');
+    // Route::get('/games', function () {
+    //     return view('users.pages.games');
+    // })->name('games');
+
+
+    Route::get('/Rehabilitation_exercises', function () {
+        return view('users.pages.Rehabilitation_exercises');
+    })->name('Rehabilitation_exercises')->middleware('auth:web');
 });

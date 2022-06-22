@@ -50,6 +50,12 @@ Route::group(['namespace' => 'admin',], function () {
         Route::DELETE('articales/destroy/{id}', [App\Http\Controllers\admin\ArticaleController::class, 'destroy'])->name("articales.destroy");
 
 
+        Route::get('videos', [App\Http\Controllers\admin\videosController::class, 'index'])->name("admin.videos");
+        Route::post('videos', [App\Http\Controllers\admin\VideosController::class, 'store'])->name("videos.add");
+        Route::get('videos/list', [App\Http\Controllers\admin\VideosController::class, 'getvideos'])->name("videos.list");
+        Route::DELETE('videos/destroy/{id}', [App\Http\Controllers\admin\VideosController::class, 'destroy'])->name("videos.destroy");
+
+
 });
 
 });
