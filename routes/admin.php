@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\diseasCotroller;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\QuestionController;
 use App\Http\Controllers\admin\ResultController;
+use App\Http\Controllers\admin\gamesControllergamesController;
 
 Route::group(['namespace' => 'admin',], function () {
     // Authentication Routes...
@@ -33,6 +34,26 @@ Route::group(['namespace' => 'admin',], function () {
 
 
         Route::get('Result', [App\Http\Controllers\admin\ResultController::class, 'index'])->name("admin.Result");
+        Route::get('Result/list', [App\Http\Controllers\admin\ResultController::class, 'Result_Ftech'])->name("Result.list");
+
+
+
+        Route::get('games', [App\Http\Controllers\admin\gamesController::class, 'index'])->name("admin.games");
+        Route::post('games', [App\Http\Controllers\admin\gamesController::class, 'store'])->name("games.add");
+        Route::get('games/list', [App\Http\Controllers\admin\gamesController::class, 'getGames'])->name("games.list");
+        Route::DELETE('games/destroy/{id}', [App\Http\Controllers\admin\gamesController::class, 'destroy'])->name("games.destroy");
+
+
+        Route::get('articales', [App\Http\Controllers\admin\ArticaleController::class, 'index'])->name("admin.articales");
+        Route::post('articales', [App\Http\Controllers\admin\ArticaleController::class, 'store'])->name("articales.add");
+        Route::get('articales/list', [App\Http\Controllers\admin\ArticaleController::class, 'articale'])->name("articales.list");
+        Route::DELETE('articales/destroy/{id}', [App\Http\Controllers\admin\ArticaleController::class, 'destroy'])->name("articales.destroy");
+
+
+        Route::get('videos', [App\Http\Controllers\admin\videosController::class, 'index'])->name("admin.videos");
+        Route::post('videos', [App\Http\Controllers\admin\VideosController::class, 'store'])->name("videos.add");
+        Route::get('videos/list', [App\Http\Controllers\admin\VideosController::class, 'getvideos'])->name("videos.list");
+        Route::DELETE('videos/destroy/{id}', [App\Http\Controllers\admin\VideosController::class, 'destroy'])->name("videos.destroy");
 
 
 });

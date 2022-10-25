@@ -29,7 +29,7 @@ class Result extends Model
     protected $table = 'result';
 
     protected $fillable = [
-        'percentage','possibilityOfInjury'
+        'user_id','diseas_id','percentage','possibilityOfInjury'
            ];
 
     public function Diseas(){

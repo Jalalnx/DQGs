@@ -29,9 +29,6 @@
     align-content: baseline !important;">
        @csrf
      {{ csrf_field() }}
-
-
-
         <div class="row ">
 
         <div class="col" style="width:400px!importan;">
@@ -58,22 +55,10 @@
         </select>
         </div>
         </div>
-
-
-
-
         </div>
-
-
-
-
-
  <div class="form-group  m-3 ">
                 <button type="submit" class="btn  btn-primary Question-add">{{('أضافه')}} </button>
-
         </div>
-
-
     </form>
             </div>
         </div>
@@ -110,16 +95,18 @@
         </div>
 
 </div>
+@endsection
 
+@section('script')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
 <script  type="text/javascript">
     $(function () {
-        console.log('befor');
     var table = $('.Q ').DataTable({
         processing: true,
         serverSide: true,
@@ -137,6 +124,7 @@
         ],
 
     });
+
   $('#table tbody')
         .on( 'mouseenter', 'td', function () {
             var colIdx = table.cell(this).index().column;
@@ -165,8 +153,5 @@
 
 
 
-console.log('aftre');
 </script>
-
-
 @endsection

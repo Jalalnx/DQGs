@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Diseas;
+use App\Models\Question;
 
 class Diagnosiswizard extends Component
 {
@@ -16,9 +17,10 @@ class Diagnosiswizard extends Component
     public $successMsg = '';
     public $data  ;
 
-    public $yes =1.0 ,$no = 0.0,$maybe=0.5;
+    public $resulte,$temp, $yes =1.0 ,$no = 0.0,$maybe=0.5;
 
 
+    public $parent_name,$child_name,$age,$address,$phone_number,$email;
     public function render()
     {
     //    $Diseas= Diseas::all();
@@ -57,7 +59,9 @@ class Diagnosiswizard extends Component
             'SelectedAnswers' => 'required',
         ]);
 
-        dd($this->SelectedAnswers);
+        // dd($this->SelectedAnswers);
+
+        $this->calcate($this->SelectedAnswers);
 
         $this->currentStep = 3;
     }
@@ -86,6 +90,7 @@ class Diagnosiswizard extends Component
      */
     public function back($step)
     {
+        $this->resulte = 0;
         $this->currentStep = $step;
     }
 
@@ -98,5 +103,30 @@ class Diagnosiswizard extends Component
     //     $this->price = '';
     //     $this->detail = '';
     //     $this->status = 1;
+    }
+
+    public function saveInfo()
+    {
+        $validatedData = $this->validate([
+            'parent_name' => 'required',
+            'child_name' => 'required',
+            'age' => 'required|numeric',
+            'address' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required',
+        ]);
+
+        $this->currentStep = 4;
+
+    }
+
+    public function calcate($dataset){
+        foreach($dataset as $key =>$Value)
+        $this->temp +=$Value;
+
+        $meta_data = Question::where('diseas_id',$this->Diseas_id)->count();
+       $this->resulte = ($this->temp/ $meta_data) * 100;
+
+
     }
 }

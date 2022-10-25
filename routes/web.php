@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\userauthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,20 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/clear', function() {
+    DB::enableQueryLog();
+    dd(\DB::getQueryLog());
+    // Log::debug(DB::getQueryLog());
+    // Artisan::call('cache:clear');
+    // Artisan::call('config:clear');
+    // Artisan::call('config:cache');
+    // Artisan::call('view:clear');
+    // Artisan::call('route:clear');
+
+    return "Cleared!";
+
+});
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('users.pages.landingPage');
 });
 Route::get(' ', function () {
-    return view('welcome');
+    // DB::enableQueryLog();
+    // dd(\DB::getQueryLog());
+    // Log::debug(DB::getQueryLog());
+    return view('users.pages.landingPage');
 });
-
-
-Route::get('singup', [App\Http\Controllers\userauthController::class,'showsingupform'])->name('singup');
-Route::get('login', [App\Http\Controllers\userauthController::class,'showLoginForm'])->name('login_page');
-Route::post('adminlogin', [App\Http\Controllers\userauthController::class,'submit'])->name('adminlogin');
-Route::POST('logout', [App\Http\Controllers\userauthController::class,'logout'])->name('admin.logout');
-
-
 
 
 Auth::routes();
@@ -35,5 +45,30 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('/user')->group(function () {
 
-    Route::get('/Diagnosis', [App\Http\Controllers\DiagnosisController::class, 'index'])->name('Diagnosis');
+        Route::get('/loginUser', [App\Http\Controllers\userauthController::class,'loginFrom'])->name('loginUser');
+       Route::get('/singupuser', [App\Http\Controllers\userauthController::class,'singupfrom'])->name('singupuser');
+
+       Route::post('/NewAcount', [App\Http\Controllers\userauthController::class,'NewAcount'])->name('NewAcount');
+       Route::get('/userlogout', [App\Http\Controllers\userauthController::class,'logout'])->name('userlogout');
+       Route::post('/attemptLogin', [App\Http\Controllers\userauthController::class,'submit'])->name('attemptLogin');
+
+      Route::get('/Diagnosis', [App\Http\Controllers\DiagnosisController::class, 'index'])->name('Diagnosis')->middleware('auth:web');;
+      Route::post('/DiagnosisCal', [App\Http\Controllers\DiagnosisController::class, 'DiagnosisCal'])->name('DiagnosisCal')->middleware('auth:web');;
+
+    // Route::get('/articale', function () {
+    //     return view('users.pages.articale');
+    // })->name('articale');
+
+    Route::get('/videos', function () {
+        return view('users.pages.videos');
+    })->name('videos');
+
+    // Route::get('/games', function () {
+    //     return view('users.pages.games');
+    // })->name('games');
+
+
+    Route::get('/Rehabilitation_exercises', function () {
+        return view('users.pages.Rehabilitation_exercises');
+    })->name('Rehabilitation_exercises')->middleware('auth:web');
 });
